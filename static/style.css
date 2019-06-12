@@ -2,13 +2,23 @@ html {
   font-family: 'Helvetica', sans-serif;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+}
+
 .container {
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-top: 25%;
+  width: 75%;
+}
+
+.errors {
+  color: red;
 }
 
 #moviereview {
   width: 100%;
+  border: 1px, solid, #646666
 }
 
 .btn {
@@ -27,4 +37,11 @@ html {
               transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
 }

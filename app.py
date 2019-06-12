@@ -43,7 +43,7 @@ def sqlite_entry(path, document, y):
 
 class ReviewForm(Form):
 
-  moviereview = TextAreaField('', [validators.DataRequired(), validators.length(min=15)])
+  moviereview = TextAreaField('', [validators.DataRequired(), validators.length(min=15, message='Review must be at least 15 characters long')])
 
 
 @app.route('/')
@@ -61,6 +61,7 @@ def results():
     review = request.form['moviereview']
     y, proba = classify(review)
     return render_template('results.html', content=review, prediction=y, probability=round(proba*100, 2))
+  return render_template('reviewform.html', form=form);
 
 @app.route('/thanks', methods=['POST'])
 def feedback():
