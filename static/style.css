@@ -3,28 +3,30 @@ html {
 }
 
 body {
-  display: flex;
-  justify-content: center;
+  height: 100%;
+  margin: 0;
 }
 
 .container {
-  margin-top: 25%;
+  margin: auto;
+  vertical-align: middle;
   width: 75%;
+  margin-top: 5%;
+}
+
+.content {
+  margin-top: 5%;
 }
 
 .errors {
   color: red;
 }
 
-#moviereview {
-  width: 100%;
-  border: 1px, solid, #646666
-}
-
 .btn {
   display: inline-block;
   border: none;
   padding: 1rem 2rem;
+  border-radius: 5px;
   margin: 0;
   text-decoration: none;
   background: #0069ed;
@@ -33,15 +35,63 @@ body {
   font-size: 1rem;
   cursor: pointer;
   text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   transition: background 250ms ease-in-out, 
               transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
 
+#moviereview {
+  width: 100%;
+  border: 1px solid #646666;
+  height: 25em;
+}
+
+#submit-review {
+  margin-top: 2em;
+}
+
+#button {
+  margin-top: 5%;
+}
+
+.feedback-btn {
+  text-transform: capitalize;
+}
+
+.correct {
+  background-color: green;
+}
+
+.incorrect {
+  background-color: red;
+  margin-left: 2.5%;
+}
 
 @media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
   .container {
-    width: 100%;
+    margin-top: 20%;
+    width: 80%;
+  }
+
+  .content {
+    margin-top: 20%;
+  }
+
+  #moviereview {
+    height: 15em;
+  }
+
+  #button {
+    margin-top: 5em;
   }
 }

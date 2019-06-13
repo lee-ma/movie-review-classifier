@@ -2,18 +2,22 @@
 <html>
   <head>
     <title>Movie Review Classifier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
     <div class="container">
-      <h2>Enter a movie review to classify</h2>
-      {% from "_formhelpers.html" import render_field %}
-      <form method="POST" action="/results">
-        {{ render_field(form.moviereview, cols='50', rows='10') }}
-        <div>
-          <input class="btn" type="submit" value="Submit" name="submit_btn">
-        </div>
-      </form>
+      <h1>Movie Review Classifier</h1>
+      <div class="content">
+        <h2>Enter a movie review to classify</h2>
+        {% from "_formhelpers.html" import render_field %}
+        <form method="POST" action="/results">
+          {{ render_field(form.moviereview, cols='50', rows='10') }}
+          <div>
+            <input id="submit-review" class="btn" type="submit" value="Submit" name="submit_btn">
+          </div>
+        </form>
+      </div>
     </div>
   </body>
 </html>

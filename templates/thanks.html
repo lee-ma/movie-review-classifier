@@ -2,14 +2,19 @@
 <html>
   <head>
     <title>Movie Review Classifier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
-    <h3>Thank you for your feedback!</h3>
-    <div id="button">
-      <form action="/">
-        <input type="submit" value="Submit another review">
-      </form>
+    <div class="container">
+      <h3>Thank you for your feedback!</h3>
+      <div>
+        <div id="button">
+          <form action="/">
+            <input class="btn" type="submit" value="Submit another review">
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>

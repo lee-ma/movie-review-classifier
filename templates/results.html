@@ -2,20 +2,27 @@
 <html>
   <head>
     <title>Movie Review Classifier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
-    <h3>Your review</h3>
-    <div>{{ content }}</div>
-    <h3>Prediction: </h3>
-    <div>{{ probability }} chance that this is a <strong>{{ prediction }}</strong> movie review</div>
-    <div id="button">
-      <form action="/thanks" method="POST">
-        <input type="submit" value="correct" name="feedback-button">
-        <input type="submit" value="incorrect" name="feedback-button">
-        <input type="hidden" value="{{ prediction }}" name="prediction">
-        <input type="hidden" value="{{ content }}" name="review">
-      </form>
+    <div class="container">
+      <h1>Classification Results</h1>
+      <div class="content">
+        <h2>Your review</h2>
+        <div>{{ content }}</div>
+        <h2 style="margin-top: 2.5em;">Prediction</h2>
+        <div>{{ probability }} chance that this is a <strong>{{ prediction }}</strong> movie review</div>
+        <div id="button">
+          <h3>Did we get it right?</h3>
+          <form action="/thanks" method="POST">
+            <input class="btn feedback-btn correct" type="submit" value="correct" name="feedback-button">
+            <input class="btn feedback-btn incorrect" type="submit" value="incorrect" name="feedback-button">
+            <input type="hidden" value="{{ prediction }}" name="prediction">
+            <input type="hidden" value="{{ content }}" name="review">
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>
