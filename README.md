@@ -1,4 +1,4 @@
-# Movie Review Sentiment Classifier
+# Movie Review Classifier
 
 This is a Flask webapp that utilizes a model trained via Logistic Regression using Stochastic Gradient Descent. The feature matrices are obtained using HashingVectorizer. The model is continually updated every time the server is restarted based on data collected from user feedback on whether their review was correctly classified.
 
