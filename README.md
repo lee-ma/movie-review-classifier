@@ -6,7 +6,7 @@ This project was built following the book: Python Machine Learning 2nd Edition b
 
 ## To run locally
 1. Clone this repo
-2. `cd /local/path/to/this/repo
+2. `cd /local/path/to/this/repo`
 3. `pip3 install -r requirements.txt`
 4. `python3 app.py`
 
