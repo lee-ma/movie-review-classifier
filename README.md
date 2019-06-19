@@ -9,5 +9,6 @@ This project was built following the book: Python Machine Learning 2nd Edition b
 2. `cd /local/path/to/this/repo`
 3. `pip3 install -r requirements.txt`
 4. `python3 app.py`
+5. Go to `localhost:5000` in your browser
 
 From there, enter your movie reviews and see if it's classified correctly!
